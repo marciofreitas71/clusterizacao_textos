@@ -25,8 +25,8 @@ O projeto consiste nos seguintes passos principais:
 6. **Exportação de Dados**: As informações sobre os arquivos PDF, os clusters atribuídos e outros detalhes são armazenados em um DataFrame do pandas e exportados para um arquivo CSV.
 
 # Execução
-Antes de executar o código, certifique-se de ajustar os caminhos das pastas **folder_path** e **dest_folder_path** de acordo com a sua estrutura de diretórios. Além disso, as dependências necessárias precisam ser instaladas previamente.
+Antes de executar o código, certifique-se de instalar as dependências usando o comando mencionado acima e ajustar os caminhos das pastas folder_path e dest_folder_path de acordo com a sua estrutura de diretórios.
+
+Para isolar o ambiente de desenvolvimento, crie e ative um ambiente virtual utilizando a ferramenta de sua escolha. Isolar o ambiente ajuda a evitar conflitos entre pacotes e a manter a organização do projeto.
 
 Após executar o código, você será apresentado com um gráfico de dispersão dos clusters. Você pode avaliar se a clusterização é adequada e, se sim, os documentos serão organizados em pastas de acordo com os clusters formados.
-
-Lembre-se de que este projeto é um exemplo básico de clusterização de textos em documentos PDF. Dependendo da natureza dos documentos e do objetivo do projeto, você pode precisar ajustar e expandir o código para obter melhores resultados.
