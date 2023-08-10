@@ -58,7 +58,22 @@ def pdf_text_extractor(folder_path):
                     text += page.extract_text()
                 documents.append(text)                
                 os.system('cls')
-    yield documents
+    return documents
+
+
+    # alternativa para iterar nas subpastas
+     # documents = []
+    # for root, _, files in tqdm(os.walk(folder_path), desc="Armazenando os textos na lista Documentos"):
+    #     for file_name in files:
+    #         file_path = os.path.join(root, file_name)
+    #         if file_path.lower().endswith('.pdf'):
+    #             with open(file_path, 'rb') as file:
+    #                 pdf_reader = PdfReader(file)
+    #                 text = ''
+    #                 for page in pdf_reader.pages:
+    #                     text += page.extract_text()
+    #                 documents.append(text)
+    # return documents
 
 def cluster_texts(documents, num_clusters=5):
     """
@@ -109,9 +124,9 @@ def plot_clusters(X, labels):
 
 if __name__ == "__main__":
     # Pasta contendo os arquivos PDF
-    folder_path = "W:/PUBLICA/Janus/12377 - PC-PP/APROVACAO/sem_movimentacao"
+    folder_path = "pasta_de_origem_dos_Documentos_a_serem_separados"
     # Pasta para onde os arquivos separados serão copiados
-    dest_folder_path = "D:/projetos/clusteriza_textos"
+    dest_folder_path = "pasta_de_destino_dos_arquivos_separados"
     
     # carrega e processa os documentos
     documents = pdf_text_extractor(folder_path)
